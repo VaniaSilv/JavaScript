@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+    
+    
+
+    <div id="container">
+    <h1 id="Titulo">Verificador de palíndromo</h1>
+    <input type="text" id="palavrainput" placeholder = "Digite uma palavra">
+    <button id="meuBotao" onclick="verificarPalindromo()">Verificar</button>
+    <p id="resultado"></p>
+  
+
+    </div>
+
+    <p id="resultado"></p>
+
+    <script> 
+    function verificarPalindromo() {
+        const palavra = document.getElementById("palavrainput").value.toLowerCase();
+        const invertida = palavra.split("").reverse().join("");
+        const resultado = document.getElementById("resultado");
+        if (palavra === invertida) {
+            resultado.innerText = "É um palíndromo!";
+        } else {
+            resultado.innerText = "Não é um palíndromo.";
+        }
+   
+
+
+
+    }
+
+
+    </script>
+    
+    <script>
+        //estilo
+        window.onload = function() {
+
+
+
+           
+            
+    document.body.style.backgroundColor = "#49c5b6";
+  
+   const estiloPlaceholder = document.createElement("style");
+    estiloPlaceholder.innerHTML = `
+  input::placeholder {
+    color: white;
+    font-size: 15px;
+    
+  }
+`;
+document.head.appendChild(estiloPlaceholder);
+
+
+
+
+
+    document.getElementById("palavrainput").style.backgroundColor = "#ECD06F";
+    document.getElementById("palavrainput").style.borderRadius = "20px"; // Bordas arredondadas
+    document.getElementById("palavrainput").style.border = 'none';
+    document.getElementById("palavrainput").style.width = "200px";
+    document.getElementById("palavrainput").style.height = "40px";
+    document.getElementById("palavrainput").style.fontSize = "20px"; // Tamanho da fonte
+    document.getElementById("palavrainput").style.color = "#ffffff"; // Cor do texto
+    document.getElementById("palavrainput").style.textAlign = "center";
+    document.getElementById("palavrainput").style.outline = "none";        
+    const titulo = document.getElementById("Titulo");
+        titulo.style.textAlign = "center";
+        titulo.style.color = "white";
+        titulo.style.fontSize = "30px";
+        titulo.style.marginBottom = "15px";
+        titulo.style.color = "white";
+    
+    const botao = document.getElementById("meuBotao");
+        botao.style.backgroundColor = "#FC4A1A";
+        botao.style.borderRadius = "60px";         // Bordas arredondadas
+        botao.style.border = 'none';
+        botao.style.color = 'white';                // Cor do texto
+        botao.style.width = '200px';
+        botao.style.height = '50px';
+        botao.style.fontSize = '15px';             // Tamanho da fonte
+        botao.style.cursor = 'pointer';            // Cursor de mãozinha ao passar o mouse
+
+    const container = document.getElementById("container");
+        container.style.textAlign = "center";
+        container.style.marginTop = "20px";
+        container.style.fontSize = "20px";
+        container.style.display = "flex";              // Ativa o Flexbox
+        container.style.flexDirection = "column";      // Coloca os elementos um embaixo do outro
+        container.style.justifyContent = "center";     // Centraliza verticalmente
+        container.style.alignItems = "center";         // Centraliza horizontalmente
+        container.style.height = "100vh";              // Ocupa toda a altura da tela
+        container.style.gap = "10px";                  // Espaçamento entre os elementos   
+        
+        }
+
+    
+    const resultado = document.getElementById("resultado");
+        resultado.style.textAlign = "center";
+        resultado.style.fontSize = "25px";
+        resultado.style.marginTop = "30px";
+        resultado.style.fontWeight = "bold";
+        resultado.style.color = "white";
+        
+    
+  
+    </script>
+</html>
+
+
+</body>
+</html>
+
+
+
+
+
+</html>
+
+
+
+
